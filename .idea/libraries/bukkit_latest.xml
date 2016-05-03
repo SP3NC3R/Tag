@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="bukkit-latest">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../Plugin Coding Jars/bukkit-latest.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
