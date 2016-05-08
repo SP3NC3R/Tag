@@ -31,10 +31,10 @@ public class WorldListener implements Listener{
             p.sendMessage("Checking if there is already a tagger...");
             if (plugin.TAGGER.size() != 1) {
                 plugin.TAGGER.add(p.getName());
-                p.sendMessage("Changed World - You should have red armour");
+                p.sendMessage("Changed World: No Tagger - You should have red armour");
             } else {
                 plugin.RUNNER.add(p.getName());
-                p.sendMessage("Changed World - You should have blue armour");
+                p.sendMessage("Changed World: Tagger Found - You should have blue armour");
             }
         }
     }
