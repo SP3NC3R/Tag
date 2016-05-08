@@ -19,7 +19,7 @@ public class ArmourMoveListener implements Listener {
     @EventHandler
     public void onInventoryClick(InventoryInteractEvent e) {
         Player p = (Player) e.getWhoClicked();
-        if (!p.getWorld().equals("tag")) {
+        if (!p.getWorld().getName().equals("tag")) {
             return;
         } else {
             e.setCancelled(true);

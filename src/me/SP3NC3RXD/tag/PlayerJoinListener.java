@@ -19,7 +19,8 @@ public class PlayerJoinListener implements Listener {
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent e) {
         Player p = e.getPlayer();
-        if (!p.getWorld().equals("tag")) {
+        ItemStack[] armour = p.getInventory().getArmorContents();
+        if (!p.getWorld().getName().equals("tag")) {
             return;
         } else {
             if (plugin.TAGGER.contains(p.getName())) {
@@ -27,6 +28,9 @@ public class PlayerJoinListener implements Listener {
             }
             if (plugin.RUNNER.contains(p.getName())) {
                 plugin.RUNNER.remove(p.getName());
+            }
+            if (armour == null) {
+                return;
             }
             p.getInventory().setHelmet(new ItemStack(null, 1));
             p.getInventory().setChestplate(new ItemStack(null, 1));

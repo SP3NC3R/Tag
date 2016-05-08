@@ -31,7 +31,6 @@ public class Tag extends JavaPlugin implements CommandExecutor {
     }
 
     public void onDisable() {
-T
         getLogger().info(getDescription().getName() + " has been disabled!");
     }
 

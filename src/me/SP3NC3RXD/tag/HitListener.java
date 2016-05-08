@@ -21,7 +21,7 @@ public class HitListener implements Listener {
         if (e.getEntity() instanceof Player && e.getDamager() instanceof Player) {
             Player target = (Player) e.getEntity();
             Player damager = (Player) e.getDamager();
-            if(!target.getWorld().equals("tag")) {
+            if(!target.getWorld().getName().equals("tag")) {
                 return;
             } else {
                 if (!plugin.TAGGER.contains(damager)) {

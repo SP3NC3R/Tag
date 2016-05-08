@@ -18,9 +18,15 @@ public class WorldListener implements Listener{
     @EventHandler
     public void onWorldChange(PlayerChangedWorldEvent event){
         Player p = event.getPlayer();
-        if (!p.getWorld().equals("tag")) {
-            p.sendMessage("This is not the tag world.");
-            return;
+        if (!p.getWorld().getName().equals("tag")) {
+            if (event.getFrom().equals("tag")) {
+
+                if (plugin.TAGGER.contains(p.getName())) {
+                    plugin.TAGGER.remove(p.getName());
+                } else if (plugin.RUNNER.contains(p.getName())) {
+                    plugin.RUNNER.remove(p.getName());
+                }
+            }
         } else {
             p.sendMessage("Checking if there is already a tagger...");
             if (plugin.TAGGER.size() != 1) {
